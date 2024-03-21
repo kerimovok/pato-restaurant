@@ -1,8 +1,9 @@
 .burger {
     color: white;
     display: none !important;
+    font-size: 1.2rem;
 
-    @include responsive(small) {
+    @include responsive(medium) {
         display: block !important;
     }
 }
