@@ -1,0 +1,61 @@
+header {
+    background: black;
+    border-top: 5px solid $color-accent-1;
+    font-size: 14px;
+    @include position(fixed, 0, 0, initial, 0, 999);
+    .container {
+        @extend %flex-between;
+        padding-block: 20px;
+
+        img {
+            width: 110px;
+        }
+
+        nav {
+            ul {
+                @extend %flex-center;
+
+                li {
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        padding: 10px;
+                        @include transition();
+                        text-transform: uppercase;
+
+                        &:hover {
+                            color: $color-accent-1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .socials {
+            @extend %flex-center;
+            a {
+                color: white;
+                text-decoration: none;
+                padding: 10px;
+                @include transition();
+
+                &:hover {
+                    color: $color-accent-1;
+                }
+            }
+        }
+
+        @include responsive(large) {
+            font-size: 12px;
+            img {
+                width: 80px;
+            }
+        }
+        @include responsive(medium) {
+            nav,
+            .socials {
+                display: none;
+            }
+        }
+    }
+}
