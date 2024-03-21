@@ -1,0 +1,8 @@
+.burger {
+    color: white;
+    display: none !important;
+
+    @include responsive(small) {
+        display: block !important;
+    }
+}
