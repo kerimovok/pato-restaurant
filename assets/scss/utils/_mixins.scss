@@ -1,0 +1,77 @@
+@mixin flex(
+    $justify-content: flex-start,
+    $align-items: flex-start,
+    $flex-direction: row
+) {
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin grid($columns: 1, $rows: 1, $gap: 0) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-template-rows: repeat($rows, 1fr);
+    gap: $gap;
+}
+
+@mixin position(
+    $position: initial,
+    $top: initial,
+    $left: initial,
+    $bottom: initial,
+    $right: initial,
+    $z-index: initial
+) {
+    position: $position;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+}
+
+@mixin size($size: 0px) {
+    width: $size;
+    height: $size;
+}
+
+@mixin bg-img($url: "", $size: cover, $position: center, $repeat: no-repeat) {
+    background-image: url($url);
+    background-size: $size;
+    background-position: $position;
+    background-repeat: $repeat;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $timing-function: ease) {
+    transition: $property $duration $timing-function;
+}
+
+@mixin shadow($x: 0, $y: 0, $blur: 0, $spread: 0, $color: rgba(0, 0, 0, 0.1)) {
+    box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin responsive($breakpoints) {
+    @if $breakpoints == small {
+        @media (max-width: 576px) {
+            @content;
+        }
+    }
+
+    @if $breakpoints == medium {
+        @media (max-width: 760px) {
+            @content;
+        }
+    }
+
+    @if $breakpoints == large {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+
+    @if $breakpoints == x-large {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+}
