@@ -39,11 +39,18 @@
     height: $size;
 }
 
-@mixin bg-img($url: "", $size: cover, $position: center, $repeat: no-repeat) {
+@mixin bg-img(
+    $url: "",
+    $size: cover,
+    $position: center,
+    $repeat: no-repeat,
+    $attachment: scroll
+) {
     background-image: url($url);
     background-size: $size;
     background-position: $position;
     background-repeat: $repeat;
+    background-attachment: $attachment;
 }
 
 @mixin transition($property: all, $duration: 0.3s, $timing-function: ease) {
