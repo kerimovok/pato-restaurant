@@ -21,13 +21,14 @@
     $left: initial,
     $bottom: initial,
     $right: initial,
-    $z-index: initial
+    $z-index: auto
 ) {
     position: $position;
     top: $top;
     left: $left;
     bottom: $bottom;
     right: $right;
+    z-index: $z-index;
 }
 
 @mixin size($size: 0px) {
