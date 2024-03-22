@@ -1,26 +1,29 @@
 header {
     border-top: 5px solid $color-accent-1;
-    font-size: 14px;
     @include position(fixed, 0, 0, initial, 0, 999);
+
     .container {
         @extend %flex-between;
         padding-block: 20px;
+        font-size: 14px;
+        height: 120px;
+        gap: 20px;
 
         img {
             width: 110px;
         }
 
         nav {
+            // flex: 1;
             ul {
-                @extend %flex-center;
+                @include flex(space-between, center, row, 40px);
 
                 li {
                     a {
                         color: white;
                         text-decoration: none;
-                        padding: 10px;
-                        @include transition();
                         text-transform: uppercase;
+                        @include transition();
 
                         &:hover {
                             color: $color-accent-1;
@@ -32,12 +35,12 @@ header {
 
         .socials {
             min-width: 110px;
-            @include flex(right, center, row);
+            @include flex(right, center, row, 0);
             a {
                 color: white;
-                text-decoration: none;
                 padding: 10px;
                 font-size: 1rem;
+                text-decoration: none;
                 @include transition();
 
                 &:hover {
@@ -48,9 +51,17 @@ header {
 
         @include responsive(large) {
             font-size: 12px;
+            height: 100px;
+
             img,
             .socials {
                 width: 80px;
+            }
+
+            nav {
+                ul {
+                    gap: 20px;
+                }
             }
         }
 
