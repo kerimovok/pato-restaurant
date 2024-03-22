@@ -1,5 +1,4 @@
 header {
-    background: black;
     border-top: 5px solid $color-accent-1;
     font-size: 14px;
     @include position(fixed, 0, 0, initial, 0, 999);
@@ -32,11 +31,13 @@ header {
         }
 
         .socials {
-            @extend %flex-center;
+            min-width: 110px;
+            @include flex(right, center, row);
             a {
                 color: white;
                 text-decoration: none;
                 padding: 10px;
+                font-size: 1rem;
                 @include transition();
 
                 &:hover {
@@ -47,10 +48,12 @@ header {
 
         @include responsive(large) {
             font-size: 12px;
-            img {
+            img,
+            .socials {
                 width: 80px;
             }
         }
+
         @include responsive(medium) {
             nav,
             .socials {
