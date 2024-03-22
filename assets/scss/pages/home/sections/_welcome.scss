@@ -1,0 +1,81 @@
+section#welcome {
+    position: relative;
+    width: 100%;
+    height: calc(100dvh - 120px);
+
+    @include bg-img(
+        $url:
+            "https://preview.colorlib.com/theme/pato/images/icons/pattern1.png.webp",
+        $repeat: repeat
+    );
+
+    .container {
+        height: 100%;
+        text-align: center;
+        @include grid(2, 1, 0);
+
+        .left-side {
+            @include flex(center, center, column);
+
+            span {
+                font-family: Courgette;
+                font-size: 30px;
+                line-height: 1.2;
+                color: #d61c22;
+            }
+            h3 {
+                font-family: Poppins;
+                font-weight: 700;
+                font-size: 50px;
+                line-height: 1.2;
+                color: #222222;
+                text-transform: uppercase;
+                letter-spacing: 6px;
+                margin-bottom: 35px;
+                margin-top: 5px;
+            }
+            p {
+                max-width: 513px;
+                margin-bottom: 22px;
+            }
+            a {
+                font-family: Montserrat;
+                font-weight: 400;
+                font-size: 12px;
+                color: #222222;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                line-height: 1.7;
+
+                i {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .right-side {
+            @extend %flex-center;
+
+            .img {
+                display: block;
+                overflow: hidden;
+                border-radius: 10px;
+                width: 390px;
+                height: 390px;
+                margin-inline: auto;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    @include transition();
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
