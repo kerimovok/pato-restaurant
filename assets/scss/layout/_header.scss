@@ -1,4 +1,5 @@
 header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
     border-top: 5px solid $color-accent-1;
     @include position(fixed, 0, 0, initial, 0, 999);
 
