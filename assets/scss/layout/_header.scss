@@ -21,7 +21,6 @@ header {
                 li {
                     a {
                         color: white;
-                        text-decoration: none;
                         text-transform: uppercase;
                         @include transition();
 
@@ -40,7 +39,6 @@ header {
                 color: white;
                 padding: 10px;
                 font-size: 1rem;
-                text-decoration: none;
                 @include transition();
 
                 &:hover {
