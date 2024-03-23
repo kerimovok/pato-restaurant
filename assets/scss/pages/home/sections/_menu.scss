@@ -1,0 +1,125 @@
+section#menu {
+    @include bg-img(
+        $url:
+            "https://preview.colorlib.com/theme/pato/images/icons/pattern1.png.webp",
+        $repeat: repeat
+    );
+
+    .container {
+        text-align: center;
+        padding-block: 120px;
+
+        .header {
+            span {
+                font-family: Courgette;
+                font-size: 30px;
+                line-height: 1.2;
+                color: #d61c22;
+            }
+            h3 {
+                font-family: Poppins;
+                font-weight: 700;
+                font-size: 50px;
+                line-height: 1.2;
+                color: #222222;
+                text-transform: uppercase;
+                letter-spacing: 10px;
+                word-spacing: 8px;
+            }
+        }
+
+        .content {
+            margin-top: 50px;
+            display: grid;
+
+            grid-template-areas:
+                "lunch dinner drink" "lunch dinner starters"
+                "happyhour happyhour dessert";
+
+            gap: 30px;
+            div {
+                @extend %flex-center;
+                @include transition();
+                border-radius: 10px;
+                a {
+                    @extend %flex-center;
+
+                    background-color: white;
+                    border-radius: 10px;
+                    opacity: 0.9;
+                    width: 157px;
+                    height: 60px;
+                    font-family: Poppins;
+                    font-weight: 500;
+                    font-size: 22px;
+                    color: #333333;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    @include transition();
+
+                    &:hover {
+                        background-color: #d61c22;
+                        color: white;
+                    }
+                }
+
+                &:hover {
+                    background-size: 120%;
+                }
+            }
+
+            .lunch {
+                @include bg-img(
+                    $url:
+                        "https://preview.colorlib.com/theme/pato/images/our-menu-01.jpg.webp",
+                    $size: 110%
+                );
+                height: 500px;
+                grid-area: lunch;
+            }
+            .dinner {
+                @include bg-img(
+                    $url:
+                        "https://preview.colorlib.com/theme/pato/images/our-menu-05.jpg.webp",
+                    $size: 110%
+                );
+                height: 500px;
+                grid-area: dinner;
+            }
+            .drink {
+                @include bg-img(
+                    $url:
+                        "https://preview.colorlib.com/theme/pato/images/our-menu-08.jpg.webp",
+                    $size: 110%
+                );
+                grid-area: drink;
+            }
+            .starters {
+                @include bg-img(
+                    $url:
+                        "https://preview.colorlib.com/theme/pato/images/our-menu-10.jpg.webp",
+                    $size: 110%
+                );
+                grid-area: starters;
+            }
+            .happyhour {
+                @include bg-img(
+                    $url:
+                        "https://preview.colorlib.com/theme/pato/images/our-menu-13.jpg.webp",
+                    $size: 110%
+                );
+                height: 230px;
+                grid-area: happyhour;
+            }
+            .dessert {
+                @include bg-img(
+                    $url:
+                        "https://preview.colorlib.com/theme/pato/images/our-menu-16.jpg.webp",
+                    $size: 110%
+                );
+                height: 230px;
+                grid-area: dessert;
+            }
+        }
+    }
+}
