@@ -1,0 +1,265 @@
+section#events {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+}
+
+section#events > .events-slider,
+section#events > .events-slider > .slick-list,
+section#events > .events-slider > .slick-list > .slick-track {
+    height: 100%;
+}
+
+section#events
+    > .events-slider
+    > .slick-list
+    > .slick-track
+    > .slick-slide:nth-child(1) {
+    @include bg-img(
+        $url:
+            "https://preview.colorlib.com/theme/pato/images/bg-event-01.jpg.webp"
+    );
+}
+section#events
+    > .events-slider
+    > .slick-list
+    > .slick-track
+    > .slick-slide:nth-child(2) {
+    @include bg-img(
+        "https://preview.colorlib.com/theme/pato/images/bg-event-02.jpg.webp"
+    );
+}
+section#events
+    > .events-slider
+    > .slick-list
+    > .slick-track
+    > .slick-slide:nth-child(3) {
+    @include bg-img(
+        "https://preview.colorlib.com/theme/pato/images/bg-event-04.jpg.webp"
+    );
+}
+
+section#events .container {
+    position: relative;
+    z-index: 1;
+    @include flex(center, center, column);
+    text-align: center;
+    color: white;
+    height: 100%;
+
+    .header {
+        margin-bottom: 40px;
+
+        h3 {
+            font-family: Poppins;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 1.2;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            word-spacing: 6px;
+            padding-top: 3px;
+        }
+
+        span {
+            font-family: Courgette;
+            font-size: 30px;
+            line-height: 1.2;
+            color: #d61c22;
+        }
+    }
+
+    .content {
+        .card {
+            @include grid(2, 1, 0);
+            border-radius: 10px;
+            overflow: hidden;
+
+            .img {
+                display: relative;
+
+                .time {
+                    background-color: #cf2227;
+                    opacity: 0.9;
+                    position: relative;
+                    width: 50px;
+                    height: 100%;
+                    font-family: Montserrat;
+                    font-weight: 400;
+                    font-size: 12px;
+                    color: white;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+
+                    span {
+                        @extend %flex-center;
+                        width: 390px;
+                        height: 50px;
+                        transform-origin: center center;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) rotateZ(90deg);
+                    }
+                }
+            }
+
+            .content {
+                background-color: white;
+                min-height: 390px;
+                padding: 40px 60px;
+                text-align: center;
+                @include flex(center, center, column);
+
+                h4 {
+                    font-family: Poppins;
+                    font-weight: 500;
+                    font-size: 22px;
+                    line-height: 1.2;
+                    color: #222222;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-family: Montserrat;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 1.7;
+                    color: #666666;
+                    margin-bottom: 30px;
+                }
+
+                .countdown {
+                    @extend %flex-between;
+                    width: 100%;
+                    color: #222222;
+
+                    div {
+                        @include flex(center, center, column);
+
+                        span:first-child {
+                            font-family: Montserrat;
+                            font-weight: 700;
+                            font-size: 50px;
+                            color: #ec1d25;
+                            line-height: 1.1;
+                            text-transform: uppercase;
+                            letter-spacing: 3px;
+                        }
+                        span:last-child {
+                            font-family: Montserrat;
+                            font-weight: 700;
+                            font-size: 12px;
+                            color: #999999;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.slide-01 .img {
+    @include bg-img(
+        "https://preview.colorlib.com/theme/pato/images/event-01.jpg.webp"
+    );
+}
+.slide-02 .img {
+    @include bg-img(
+        "https://preview.colorlib.com/theme/pato/images/event-02.jpg.webp"
+    );
+}
+.slide-03 .img {
+    @include bg-img(
+        "https://preview.colorlib.com/theme/pato/images/event-03.jpg.webp"
+    );
+}
+// SLIDER
+.arrow-slider {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 5;
+    cursor: pointer;
+    top: 50%;
+    opacity: 0;
+    transform: translateY(-50%);
+    @include transition();
+}
+
+section#events:hover .arrow-slider {
+    opacity: 0.5;
+}
+
+.arrow-slider:hover {
+    background-color: $color-accent-2;
+}
+
+.arrow-slider.prev-slider {
+    left: 50px;
+}
+
+.arrow-slider.next-slider {
+    right: 50px;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 50px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+
+    li {
+        position: relative;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+
+        button {
+            // To hide the default text
+            font-size: 0;
+            line-height: 0;
+            color: transparent;
+
+            display: block;
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+            background-color: #958e88;
+            border: 0;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            @include transition();
+
+            &:hover {
+                border: 3px solid white;
+                background-color: $color-accent-1;
+            }
+        }
+
+        &.slick-active button {
+            opacity: 0.7;
+            border: 3px solid white;
+            background-color: $color-accent-1;
+        }
+    }
+}
