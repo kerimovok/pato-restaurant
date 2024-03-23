@@ -2,8 +2,10 @@ header {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
     border-top: 5px solid $color-accent-1;
     @include position(fixed, 0, 0, initial, 0, 999);
+    @include transition();
 
     .container {
+        @include transition();
         @extend %flex-between;
         padding-block: 20px;
         font-size: 14px;
@@ -70,5 +72,22 @@ header {
                 display: none;
             }
         }
+    }
+
+    @include responsive(medium) {
+        @include position(absolute, 0, 0, initial, 0, 999);
+    }
+}
+
+.header-white {
+    background: white !important;
+    color: $color-dark-2 !important;
+
+    .container {
+        height: 80px;
+    }
+    .container > nav > ul > li > a,
+    .container > .socials > a {
+        color: $color-dark-2 !important;
     }
 }

@@ -1,5 +1,5 @@
-// SLICK SLIDER
 $(document).ready(function () {
+    // SLICK SLIDER
     $(".hero-slider").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -75,4 +75,39 @@ $(document).ready(function () {
     );
 
     initializeClock("clockdiv", deadline);
+
+    // HEADER
+    // JQuery is something 💀
+    var header = $("header");
+    var logo = $(header).find("img");
+    var logoWhite = $(logo).attr("src");
+    var logoRed =
+        "https://preview.colorlib.com/theme/pato/images/icons/logo2.png.webp";
+
+    $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 5 && $(this).width() > 760) {
+            $(logo).attr("src", logoRed);
+            $(header).addClass("header-white");
+        } else {
+            $(logo).attr("src", logoWhite);
+            $(header).removeClass("header-white");
+        }
+    });
+
+    // Vanilla JS
+    // var header = document.querySelector("header");
+    // var logo = header.querySelector("img");
+    // var logoWhite = logo.getAttribute("src");
+    // var logoRed =
+    //     "https://preview.colorlib.com/theme/pato/images/icons/logo2.png.webp";
+
+    // window.addEventListener("scroll", function () {
+    //     if (this.scrollTop > 5 && this.innerWidth > 760) {
+    //         logo.setAttribute("src", logoRed);
+    //         header.classList.add("header-white");
+    //     } else {
+    //         logo.setAttribute("src", logoWhite);
+    //         header.classList.remove("header-white");
+    //     }
+    // });
 });
