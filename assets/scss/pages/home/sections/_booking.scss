@@ -1,0 +1,118 @@
+section#booking {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+
+    @include bg-img(
+        $url:
+            "https://preview.colorlib.com/theme/pato/images/icons/pattern1.png.webp",
+        $repeat: repeat
+    );
+
+    .container {
+        height: 100%;
+
+        @include grid(2, 1, 50px);
+        padding-block: 120px;
+        text-align: center;
+
+        .left-side {
+            height: 100%;
+            @include flex(center, center, column);
+            .header {
+                span {
+                    font-family: Courgette;
+                    font-size: 30px;
+                    line-height: 1.2;
+                    color: #d61c22;
+                }
+                h3 {
+                    font-family: Poppins;
+                    font-weight: 700;
+                    font-size: 50px;
+                    line-height: 1.2;
+                    color: #222222;
+                    text-transform: uppercase;
+                    letter-spacing: 6px;
+                    margin-bottom: 35px;
+                }
+            }
+            form {
+                width: 100%;
+                .content {
+                    @include grid(2, 1, 20px);
+                    width: 100%;
+
+                    div {
+                        @include flex(space-between, flex-start, column, 10px);
+
+                        label {
+                            font-family: Montserrat;
+                            font-weight: 400;
+                            font-size: 15px;
+                            color: #555555;
+                        }
+                        input,
+                        select {
+                            font-family: Montserrat;
+                            font-weight: 400;
+                            font-size: 14px;
+                            color: #666666;
+                            font-family: Montserrat;
+                            font-weight: 400;
+                            font-size: 14px;
+                            color: #666666;
+                            border-radius: 10px;
+                            outline: none;
+                            padding-inline: 20px;
+                            width: 100%;
+                            height: 50px;
+                            margin-top: 3px;
+                            border: 2px solid #d9d9d9;
+                        }
+                    }
+                }
+
+                .footer button {
+                    margin: 20px auto;
+                    background: #111111;
+                    border-radius: 10px;
+                    width: 150px;
+                    height: 40px;
+                    font-family: Montserrat;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 1.1;
+                    color: white;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    @include transition();
+
+                    &:hover {
+                        background: #d61c22;
+                    }
+                }
+            }
+        }
+
+        .right-side {
+            height: 100%;
+            @extend %flex-center;
+            .img {
+                overflow: hidden;
+                border-radius: 10px;
+                max-width: 390px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    @include transition();
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
