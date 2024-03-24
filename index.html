@@ -24,6 +24,11 @@
             type="text/css"
             href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
         />
+        <!-- FancyBox -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+        />
         <title>Home</title>
     </head>
     <body>
@@ -546,6 +551,21 @@
                     </div>
                 </div>
             </section>
+            <section id="video">
+                <div>
+                    <span> Discover </span>
+                    <h3>Our Video</h3>
+                    <a
+                        data-fancybox="video"
+                        data-src="https://youtu.be/5k1hSu2gdKE"
+                    >
+                        <i
+                            class="fa fa-play fs-18 m-l-2"
+                            aria-hidden="true"
+                        ></i>
+                    </a>
+                </div>
+            </section>
         </main>
         <footer></footer>
         <!-- JQuery -->
@@ -566,6 +586,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
         <script src="./assets/js/main.js"></script>
     </body>
 </html>

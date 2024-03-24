@@ -1,0 +1,52 @@
+section#video {
+    height: 100dvh;
+    width: 100%;
+    @include bg-img(
+        $url:
+            "https://preview.colorlib.com/theme/pato/images/bg-cover-video-02.jpg.webp",
+        $attachment: fixed
+    );
+
+    div {
+        @include flex(center, center, column);
+        padding: 120px 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        text-align: center;
+        span {
+            font-family: Courgette;
+            font-size: 30px;
+            line-height: 1.2;
+            color: #d61c22;
+        }
+        h3 {
+            font-family: Poppins;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 1.2;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            word-spacing: 6px;
+        }
+
+        a {
+            @extend %flex-center;
+            margin: 50px auto;
+            color: #222222;
+            width: 70px;
+            height: 70px;
+            background-color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            @include transition();
+
+            &:hover {
+                background-color: #d61c226b;
+                color: white;
+                transform: scale(1.1);
+            }
+        }
+    }
+}

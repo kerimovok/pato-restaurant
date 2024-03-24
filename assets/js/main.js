@@ -127,4 +127,7 @@ $(document).ready(function () {
     //         header.classList.remove("header-white");
     //     }
     // });
+
+    // VIDEO
+    Fancybox.bind('[data-fancybox="video"]', {});
 });
