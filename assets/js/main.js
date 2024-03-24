@@ -130,4 +130,5 @@ $(document).ready(function () {
 
     // VIDEO
     Fancybox.bind('[data-fancybox="video"]', {});
+    Fancybox.bind('[data-fancybox="footer-gallery"]', {});
 });

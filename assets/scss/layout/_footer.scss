@@ -1,0 +1,120 @@
+footer {
+    .main {
+        background-color: #222222;
+        padding: 50px 50px;
+        .container {
+            @include grid(3, 1, 50px);
+        }
+
+        div {
+            h4 {
+                font-family: Poppins;
+                font-weight: 500;
+                font-size: 18px;
+                color: white;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 33px;
+            }
+            ul {
+                margin-bottom: 70px;
+                li {
+                    font-family: Montserrat;
+                    font-weight: 400;
+                    font-size: 13px;
+                    color: #999999;
+                    line-height: 1.7;
+                    margin-bottom: 14px;
+
+                    i {
+                        width: 20px;
+                    }
+                }
+            }
+            p {
+                font-family: Montserrat;
+                font-weight: 400;
+                font-size: 13px;
+                color: #999999;
+                line-height: 1.7;
+                margin-bottom: 18px;
+            }
+            span {
+                color: #cccccc;
+                margin-right: 5px;
+                font-size: 13px;
+            }
+
+            span:last-of-type {
+                font-family: Montserrat;
+                font-weight: 400;
+                font-size: 12px;
+                color: #555555;
+            }
+            a {
+                font-family: Montserrat;
+                font-weight: 400;
+                font-size: 13px;
+                color: #ec1d25;
+                line-height: 1.7;
+            }
+
+            div {
+                margin-bottom: 25px;
+            }
+
+            .gallery {
+                @include grid(4, 1, 20px);
+                a {
+                    cursor: pointer;
+                    position: relative;
+                    img {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 999;
+                        background-color: #ec1d24;
+                        opacity: 0;
+                        @include transition();
+                    }
+                    &:hover {
+                        &:before {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottom {
+        background-color: #111111;
+        color: white;
+        padding: 20px 50px;
+        .container {
+            @extend %flex-between;
+        }
+
+        .left-side {
+            @include flex(center, center, row, 20px);
+            font-size: 14px;
+        }
+        .right-side {
+            font-size: 14px;
+
+            span {
+                font-size: 14px;
+                line-height: 1.7;
+                color: #999999;
+            }
+        }
+    }
+}
