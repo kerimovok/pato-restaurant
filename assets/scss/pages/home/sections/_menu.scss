@@ -31,7 +31,8 @@ section#menu {
                     font-size: 22px;
                     font-weight: 500;
                     opacity: 0.9;
-                    width: 150px;
+                    min-width: 150px;
+                    padding: 10px 20px;
                     height: 60px;
                     letter-spacing: 3px;
                     background-color: white;
