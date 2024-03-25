@@ -47,14 +47,15 @@ section#hero .container {
     height: 100%;
 
     h1 {
-        font-family: Poppins;
-        font-weight: 700;
         font-size: 90px;
         line-height: 1.1;
-        text-transform: uppercase;
         letter-spacing: 10px;
         word-spacing: 10px;
         margin-bottom: 35px;
+
+        @include responsive(large) {
+            font-size: 70px;
+        }
     }
 
     span {
@@ -62,6 +63,10 @@ section#hero .container {
         font-size: 60px;
         line-height: 1.1;
         margin-bottom: 15px;
+
+        @include responsive(large) {
+            font-size: 50px;
+        }
     }
 
     a {
