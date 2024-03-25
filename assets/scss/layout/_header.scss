@@ -45,6 +45,7 @@ header {
         }
 
         @include responsive(large) {
+            padding-inline: 25px;
             font-size: 12px;
             height: $header-height-mobile;
 
