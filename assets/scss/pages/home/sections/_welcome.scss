@@ -1,11 +1,16 @@
 section#welcome {
-    height: calc(100dvh - 80px);
+    min-height: calc(100dvh - 80px);
     @extend %bg-pattern;
 
     .container {
+        padding-block: 120px;
         height: 100%;
         text-align: center;
         @include grid(2, 1, 0);
+
+        @include responsive(large) {
+            @include grid(1, 1, 50px);
+        }
 
         .left-side {
             @extend %flex-center-column;
