@@ -9,7 +9,7 @@ section#welcome {
         @include grid(2, 1, 0);
 
         @include responsive(large) {
-            @include grid(1, 1, 50px);
+            @include grid(1, 2, 50px);
         }
 
         .left-side {
@@ -48,6 +48,9 @@ section#welcome {
                 border-radius: 10px;
                 @include size(390px);
                 margin-inline: auto;
+                @include responsive(large) {
+                    @include size(80%);
+                }
 
                 img {
                     @include img($scaleOnHover: true);
