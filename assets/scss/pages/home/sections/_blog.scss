@@ -1,6 +1,6 @@
 section#blog {
-    height: 100dvh;
     width: 100%;
+    min-height: 100dvh;
 
     .container {
         padding-block: 120px;
@@ -8,6 +8,10 @@ section#blog {
 
         .content {
             @include grid(3, 1, 50px);
+            @include responsive(medium) {
+                @include grid(1, 1, 50px);
+            }
+
             margin-top: 50px;
 
             div {
