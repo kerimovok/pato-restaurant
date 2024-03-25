@@ -2,8 +2,9 @@
     color: white;
     display: none !important;
     font-size: 1.2rem;
+    cursor: pointer;
 
-    @include responsive(medium) {
+    @include responsive(large) {
         display: block !important;
     }
 }

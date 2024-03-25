@@ -48,17 +48,6 @@ header {
             font-size: 12px;
             height: $header-height-mobile;
 
-            img,
-            .socials {
-                width: 80px;
-            }
-
-            nav ul {
-                gap: 20px;
-            }
-        }
-
-        @include responsive(medium) {
             nav,
             .socials {
                 display: none;
@@ -75,6 +64,9 @@ header {
     background: rgba(255, 255, 255, 0.9) !important;
     color: $dark-color--2 !important;
 
+    .burger {
+        color: $primary-color !important;
+    }
     .container {
         height: $header-height-fixed;
     }
