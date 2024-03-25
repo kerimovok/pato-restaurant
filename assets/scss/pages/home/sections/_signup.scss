@@ -11,6 +11,7 @@ section#signup {
 
         form {
             @extend %flex-center;
+            flex-wrap: wrap;
             gap: 15px;
             span {
                 font-weight: 500;
