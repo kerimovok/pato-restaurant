@@ -68,7 +68,7 @@ footer {
             }
 
             .gallery {
-                @include grid(4, 1, 20px);
+                @include grid(4, 3, 20px);
                 a {
                     cursor: pointer;
                     position: relative;

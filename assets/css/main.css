@@ -388,6 +388,121 @@ ul.slider-dots li.slick-active button {
   background-color: #d61c22;
 }
 
+.sidebar {
+  min-width: 250px;
+  width: 400px;
+  max-width: 90%;
+  position: fixed;
+  top: 0;
+  left: initial;
+  bottom: 0;
+  right: -100%;
+  z-index: 1050;
+  background-color: white;
+  padding: 30px 50px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.sidebar .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 30px;
+}
+.sidebar .top i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.sidebar ul li {
+  margin-bottom: 13px;
+}
+.sidebar ul li a {
+  font-size: 14px;
+  color: #222222;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.sidebar ul li a:hover {
+  color: #ec1d25;
+}
+.sidebar ul li:last-child {
+  margin-top: 35px;
+}
+.sidebar ul li:last-child a {
+  display: block;
+  color: white;
+  background: #111111;
+  margin-inline: auto;
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+  font-size: 12px;
+  line-height: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.sidebar ul li:last-child a:hover {
+  background: #ec1d25;
+}
+.sidebar h3 {
+  font-weight: 500;
+  font-size: 18px;
+  color: #222222;
+  letter-spacing: 3px;
+  margin-block: 30px;
+}
+.sidebar .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+.sidebar .gallery a {
+  cursor: pointer;
+  position: relative;
+}
+.sidebar .gallery a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.sidebar .gallery a:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 999;
+  background-color: #ec1d25;
+  opacity: 0;
+}
+.sidebar .gallery a:hover:before {
+  opacity: 0.8;
+}
+
+.sidebar + .overlay {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: -100%;
+  bottom: 0;
+  right: unset;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+.show-sidebar.sidebar {
+  right: 0;
+}
+.show-sidebar.sidebar + .overlay {
+  right: 0;
+  left: 0;
+}
+
 header {
   border-top: 5px solid #d61c22;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
@@ -552,7 +667,7 @@ footer .main div div {
 footer .main div .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 20px;
 }
 footer .main div .gallery a {

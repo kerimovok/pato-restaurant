@@ -1,0 +1,112 @@
+.sidebar {
+    min-width: 250px;
+    width: 400px;
+    max-width: 90%;
+    @include position(
+        $position: fixed,
+        $top: 0,
+        $bottom: 0,
+        $right: -100%,
+        $z-index: 1050
+    );
+    background-color: white;
+    padding: 30px 50px;
+    @include transition();
+    text-align: center;
+
+    .top {
+        @include flex(flex-end, center, row, 0);
+        margin-bottom: 30px;
+        i {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    }
+    ul li {
+        margin-bottom: 13px;
+
+        a {
+            font-size: 14px;
+            color: $dark-color--2;
+            line-height: 1.2;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+
+    ul li:last-child {
+        margin-top: 35px;
+        a {
+            display: block;
+            color: white;
+            background: $dark-color--1;
+            margin-inline: auto;
+            border-radius: 10px;
+            width: 150px;
+            height: 40px;
+            font-size: 12px;
+            line-height: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            &:hover {
+                background: $secondary-color;
+            }
+        }
+    }
+    h3 {
+        font-weight: 500;
+        font-size: 18px;
+        color: $dark-color--2;
+        letter-spacing: 3px;
+        margin-block: 30px;
+    }
+
+    // Could be a separate component, but I'm too lazy for that
+    .gallery {
+        @include grid(3, 3, 20px);
+        a {
+            cursor: pointer;
+            position: relative;
+
+            img {
+                @include img();
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                z-index: 999;
+                background-color: $secondary-color;
+                opacity: 0;
+            }
+
+            &:hover:before {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+// Overlay
+.sidebar + .overlay {
+    content: "";
+    @include position(fixed, 0, -100%, 0, unset, 1000);
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+// States
+.show-sidebar {
+    &.sidebar {
+        right: 0;
+
+        + .overlay {
+            right: 0;
+            left: 0;
+        }
+    }
+}

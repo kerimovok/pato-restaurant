@@ -131,6 +131,7 @@ $(document).ready(function () {
     // VIDEO
     Fancybox.bind('[data-fancybox="video"]', {});
     Fancybox.bind('[data-fancybox="footer-gallery"]', {});
+    Fancybox.bind('[data-fancybox="sidebar-gallery"]', {});
 
     // PARALLAX
     $(".parallax").parallax();
@@ -150,5 +151,27 @@ $(document).ready(function () {
         } else {
             $("#scroll-up").css("opacity", "0");
         }
+    });
+
+    // SIDEBAR
+    // $("body").append('<div class="overlay-sidebar trans-0-4"></div>');
+    var showSidebarBtn = $(".show-sidebar");
+    var hideSidebarBtn = $(".hide-sidebar");
+    var sidebar = $(".sidebar");
+    var overlay = $(".overlay");
+
+    $(showSidebarBtn).on("click", function () {
+        $(sidebar).addClass("show-sidebar");
+        $(overlay).addClass("show-overlay");
+    });
+
+    $(hideSidebarBtn).on("click", function () {
+        $(sidebar).removeClass("show-sidebar");
+        $(overlay).removeClass("show-overlay");
+    });
+
+    $(overlay).on("click", function () {
+        $(sidebar).removeClass("show-sidebar");
+        $(overlay).removeClass("show-overlay");
     });
 });
