@@ -104,10 +104,10 @@ $(document).ready(function () {
     $(window).on("scroll", function () {
         if ($(this).scrollTop() > 5 && $(this).width() > 760) {
             $(logo).attr("src", logoRed);
-            $(header).addClass("header-white");
+            $(header).addClass("header-fixed");
         } else {
             $(logo).attr("src", logoWhite);
-            $(header).removeClass("header-white");
+            $(header).removeClass("header-fixed");
         }
     });
 
@@ -121,14 +121,34 @@ $(document).ready(function () {
     // window.addEventListener("scroll", function () {
     //     if (this.scrollTop > 5 && this.innerWidth > 760) {
     //         logo.setAttribute("src", logoRed);
-    //         header.classList.add("header-white");
+    //         header.classList.add("header-fixed");
     //     } else {
     //         logo.setAttribute("src", logoWhite);
-    //         header.classList.remove("header-white");
+    //         header.classList.remove("header-fixed");
     //     }
     // });
 
     // VIDEO
     Fancybox.bind('[data-fancybox="video"]', {});
     Fancybox.bind('[data-fancybox="footer-gallery"]', {});
+
+    // PARALLAX
+    $(".parallax").parallax();
+    // $(".parallax").parallax({
+    //     imageSrc:
+    //         "https://preview.colorlib.com/theme/pato/images/bg-intro-01.jpg.webp",
+    //     speed: 0.3,
+    //     bleed: 100,
+    // });
+
+    // SCROLL TO TOP
+    var windowH = $(window).height() / 2;
+
+    $(window).on("scroll", function () {
+        if ($(this).scrollTop() > windowH) {
+            $("#scroll-up").css("opacity", "1");
+        } else {
+            $("#scroll-up").css("opacity", "0");
+        }
+    });
 });

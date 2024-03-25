@@ -7,44 +7,27 @@ section#video {
         $attachment: fixed
     );
 
+    @include heading(50px, white, 10px, 6px, 5px, 35px);
+
     div {
         @include flex(center, center, column);
-        padding: 120px 0;
+        padding-block: 120px;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
 
-        text-align: center;
-        span {
-            font-family: Courgette;
-            font-size: 30px;
-            line-height: 1.2;
-            color: #d61c22;
-        }
-        h3 {
-            font-family: Poppins;
-            font-weight: 700;
-            font-size: 50px;
-            line-height: 1.2;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 10px;
-            word-spacing: 6px;
-        }
-
         a {
             @extend %flex-center;
+            @include size(70px);
             margin: 50px auto;
-            color: #222222;
-            width: 70px;
-            height: 70px;
+            color: $dark-color--2;
             background-color: white;
             border-radius: 50%;
             cursor: pointer;
-            @include transition();
 
             &:hover {
-                background-color: #d61c226b;
                 color: white;
+                background-color: $primary-color;
+                opacity: 0.9;
                 transform: scale(1.1);
             }
         }

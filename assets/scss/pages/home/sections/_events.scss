@@ -41,34 +41,12 @@ section#events
 
 section#events .container {
     position: relative;
-    z-index: 1;
-    @include flex(center, center, column);
     text-align: center;
+    @include flex(center, center, column);
     color: white;
     height: 100%;
 
-    .header {
-        margin-bottom: 40px;
-
-        h3 {
-            font-family: Poppins;
-            font-weight: 700;
-            font-size: 50px;
-            line-height: 1.2;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 6px;
-            word-spacing: 6px;
-            padding-top: 3px;
-        }
-
-        span {
-            font-family: Courgette;
-            font-size: 30px;
-            line-height: 1.2;
-            color: #d61c22;
-        }
-    }
+    @include heading(50px, white, 6px, 6px, 5px, 50px);
 
     .content {
         .card {
@@ -80,17 +58,15 @@ section#events .container {
                 display: relative;
 
                 .time {
-                    background-color: #cf2227;
-                    opacity: 0.9;
                     position: relative;
                     width: 50px;
                     height: 100%;
-                    font-family: Montserrat;
-                    font-weight: 400;
-                    font-size: 12px;
                     color: white;
-                    text-transform: uppercase;
+                    background-color: #cf2227;
+                    opacity: 0.9;
+                    font-size: 12px;
                     letter-spacing: 1px;
+                    text-transform: uppercase;
 
                     span {
                         @extend %flex-center;
@@ -106,36 +82,42 @@ section#events .container {
             }
 
             .content {
-                background-color: white;
+                padding: 40px 50px;
                 min-height: 390px;
-                padding: 40px 60px;
+                background-color: white;
                 text-align: center;
                 @include flex(center, center, column);
 
                 h4 {
-                    font-family: Poppins;
                     font-weight: 500;
                     font-size: 22px;
                     line-height: 1.2;
-                    color: #222222;
+                    color: $dark-color--2;
                     text-transform: uppercase;
                     letter-spacing: 3px;
                     margin-bottom: 10px;
                 }
 
                 p {
-                    font-family: Montserrat;
                     font-weight: 400;
                     font-size: 15px;
                     line-height: 1.7;
-                    color: #666666;
+                    color: $dark-color-accent--3;
                     margin-bottom: 30px;
+                }
+
+                a {
+                    font-size: 12px;
+                    color: $dark-color--2;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin-top: 40px;
                 }
 
                 .countdown {
                     @extend %flex-between;
                     width: 100%;
-                    color: #222222;
+                    color: $dark-color--2;
 
                     div {
                         @include flex(center, center, column);
@@ -144,7 +126,7 @@ section#events .container {
                             font-family: Montserrat;
                             font-weight: 700;
                             font-size: 50px;
-                            color: #ec1d25;
+                            color: $secondary-color;
                             line-height: 1.1;
                             text-transform: uppercase;
                             letter-spacing: 3px;
@@ -153,7 +135,7 @@ section#events .container {
                             font-family: Montserrat;
                             font-weight: 700;
                             font-size: 12px;
-                            color: #999999;
+                            color: $dark-color-accent--2;
                             text-transform: uppercase;
                             letter-spacing: 1px;
                         }
@@ -178,88 +160,8 @@ section#events .container {
         "https://preview.colorlib.com/theme/pato/images/event-03.jpg.webp"
     );
 }
-// SLIDER
-.arrow-slider {
-    background-color: #000000;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    font-size: 18px;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 5;
-    cursor: pointer;
-    top: 50%;
-    opacity: 0;
-    transform: translateY(-50%);
-    @include transition();
-}
 
+// SLIDER
 section#events:hover .arrow-slider {
     opacity: 0.5;
-}
-
-.arrow-slider:hover {
-    background-color: $color-accent-2;
-}
-
-.arrow-slider.prev-slider {
-    left: 50px;
-}
-
-.arrow-slider.next-slider {
-    right: 50px;
-}
-
-.slider-dots {
-    position: absolute;
-    bottom: 50px;
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-
-    li {
-        position: relative;
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        margin: 0 5px;
-        padding: 0;
-        cursor: pointer;
-
-        button {
-            // To hide the default text
-            font-size: 0;
-            line-height: 0;
-            color: transparent;
-
-            display: block;
-            width: 15px;
-            height: 15px;
-            cursor: pointer;
-            background-color: #958e88;
-            border: 0;
-            border-radius: 50%;
-            border: 2px solid transparent;
-            @include transition();
-
-            &:hover {
-                border: 3px solid white;
-                background-color: $color-accent-1;
-            }
-        }
-
-        &.slick-active button {
-            opacity: 0.7;
-            border: 3px solid white;
-            background-color: $color-accent-1;
-        }
-    }
 }

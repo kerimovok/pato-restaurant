@@ -1,68 +1,60 @@
 header {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
-    border-top: 5px solid $color-accent-1;
+    border-top: 5px solid $primary-color;
+    @include gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
     @include position(fixed, 0, 0, initial, 0, 999);
-    @include transition();
 
     .container {
-        @include transition();
         @extend %flex-between;
+        gap: 20px;
         padding-block: 20px;
         font-size: 14px;
-        height: 120px;
-        gap: 20px;
+        height: $header-height-static;
+        @include transition();
 
-        img {
+        a#logo > img {
             width: 110px;
         }
 
-        nav {
+        nav > ul {
             // flex: 1;
-            ul {
-                @include flex(space-between, center, row, 40px);
+            @include flex(space-between, center, row, 40px);
 
-                li {
-                    a {
-                        color: white;
-                        text-transform: uppercase;
-                        @include transition();
+            li > a {
+                color: white;
+                text-transform: uppercase;
 
-                        &:hover {
-                            color: $color-accent-1;
-                        }
-                    }
+                &:hover {
+                    color: $secondary-color;
                 }
             }
         }
 
         .socials {
             min-width: 110px;
-            @include flex(right, center, row, 0);
+            @include flex(right);
+
             a {
                 color: white;
                 padding: 10px;
                 font-size: 1rem;
-                @include transition();
 
                 &:hover {
-                    color: $color-accent-1;
+                    color: $secondary-color;
                 }
             }
         }
 
         @include responsive(large) {
             font-size: 12px;
-            height: 100px;
+            height: $header-height-mobile;
 
             img,
             .socials {
                 width: 80px;
             }
 
-            nav {
-                ul {
-                    gap: 20px;
-                }
+            nav ul {
+                gap: 20px;
             }
         }
 
@@ -79,15 +71,15 @@ header {
     }
 }
 
-.header-white {
-    background: rgba(255, 255, 255, 0.8) !important;
-    color: $color-dark-2 !important;
+.header-fixed {
+    background: rgba(255, 255, 255, 0.9) !important;
+    color: $dark-color--2 !important;
 
     .container {
-        height: 80px;
+        height: $header-height-fixed;
     }
     .container > nav > ul > li > a,
     .container > .socials > a {
-        color: $color-dark-2 !important;
+        color: $dark-color--2 !important;
     }
 }

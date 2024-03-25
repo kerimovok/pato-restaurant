@@ -9,57 +9,37 @@ section#menu {
         text-align: center;
         padding-block: 120px;
 
-        .header {
-            span {
-                font-family: Courgette;
-                font-size: 30px;
-                line-height: 1.2;
-                color: #d61c22;
-            }
-            h3 {
-                font-family: Poppins;
-                font-weight: 700;
-                font-size: 50px;
-                line-height: 1.2;
-                color: #222222;
-                text-transform: uppercase;
-                letter-spacing: 10px;
-                word-spacing: 8px;
-            }
-        }
+        @include heading(50px, $dark-color--2, 10px, 8px, 5px, 50px);
 
         .content {
-            margin-top: 50px;
             display: grid;
-
             grid-template-areas:
-                "lunch dinner drink" "lunch dinner starters"
+                "lunch dinner drink"
+                "lunch dinner starters"
                 "happyhour happyhour dessert";
-
             gap: 30px;
+
             div {
                 @extend %flex-center;
                 @include transition();
                 border-radius: 10px;
                 a {
                     @extend %flex-center;
-
-                    background-color: white;
-                    border-radius: 10px;
-                    opacity: 0.9;
-                    width: 157px;
-                    height: 60px;
                     font-family: Poppins;
-                    font-weight: 500;
+                    border-radius: 10px;
+                    color: $dark-color--3;
                     font-size: 22px;
-                    color: #333333;
-                    text-transform: uppercase;
+                    font-weight: 500;
+                    opacity: 0.9;
+                    width: 150px;
+                    height: 60px;
                     letter-spacing: 3px;
-                    @include transition();
+                    background-color: white;
+                    text-transform: uppercase;
 
                     &:hover {
-                        background-color: #d61c22;
                         color: white;
+                        background-color: $primary-color;
                     }
                 }
 

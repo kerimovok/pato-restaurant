@@ -32,10 +32,16 @@
         <title>Home</title>
     </head>
     <body>
+        <!-- For displaying current breakpoint -->
         <div class="breakpoint"></div>
+        <!-- Scroll to top -->
+        <a href="#" id="scroll-up">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+        </a>
+        <!-- #region HEADER -->
         <header>
             <div class="container">
-                <a href="/">
+                <a id="logo" href="/">
                     <img
                         src="https://preview.colorlib.com/theme/pato/images/icons/logo.png.webp"
                         alt="PATO Restaurant Logo"
@@ -43,24 +49,33 @@
                 </a>
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Reservation</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/menu.html">Menu</a></li>
+                        <li>
+                            <a href="pages/reservation.html">Reservation</a>
+                        </li>
+                        <li><a href="pages/gallery.html">Gallery</a></li>
+                        <li><a href="pages/about.html">About</a></li>
+                        <li><a href="pages/blog.html">Blog</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
                     </ul>
                 </nav>
-
                 <i class="burger fas fa-bars"></i>
                 <div class="socials">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"
+                        ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="#" target="_blank"
+                        ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a href="#" target="_blank"
+                        ><i class="fab fa-facebook-f"></i
+                    ></a>
                 </div>
             </div>
         </header>
+        <!-- #endregion -->
+        <!-- #region MAIN -->
         <main>
             <section id="hero">
                 <div class="hero-slider">
@@ -90,15 +105,17 @@
             <section id="welcome">
                 <div class="container">
                     <div class="left-side">
-                        <span>Italian Restaurant</span>
-                        <h3>Welcome</h3>
+                        <div class="heading">
+                            <span>Italian Restaurant</span>
+                            <h3>Welcome</h3>
+                        </div>
                         <p>
                             Donec quis lorem nulla. Nunc eu odio mi. Morbi nec
                             lobortis est. Sed fringilla, nunc sed imperdiet
                             lacinia, nisl ante egestas mi, ac facilisis ligula
                             sem id neque.
                         </p>
-                        <a href="about.html">
+                        <a href="pages/about.html">
                             Our Story
                             <i
                                 class="fas fa-long-arrow-right"
@@ -118,18 +135,20 @@
             </section>
             <section id="intro">
                 <div class="parallax">
-                    <span>Discover</span>
-                    <h3>Pato Place</h3>
+                    <div class="heading">
+                        <span>Discover</span>
+                        <h3>Pato Place</h3>
+                    </div>
                 </div>
                 <div class="container">
-                    <div class="">
+                    <div>
                         <a href="#" class="img">
                             <img
                                 src="https://preview.colorlib.com/theme/pato/images/intro-01.jpg.webp"
                                 alt="City view from a restaurant"
                             />
                         </a>
-                        <h4>Romantic Restaurant</h4>
+                        <a href="#"><h4>Romantic Restaurant</h4></a>
                         <p>
                             Phasellus lorem enim, luctus ut velit eget,
                             con-vallis egestas eros.
@@ -142,14 +161,14 @@
                             ></i>
                         </a>
                     </div>
-                    <div class="">
+                    <div>
                         <a href="#" class="img">
                             <img
                                 src="https://preview.colorlib.com/theme/pato/images/intro-02.jpg.webp"
                                 alt="City view from a restaurant"
                             />
                         </a>
-                        <h4>Romantic Restaurant</h4>
+                        <a href="#"><h4>Delicious Food</h4></a>
                         <p>
                             Phasellus lorem enim, luctus ut velit eget,
                             con-vallis egestas eros.
@@ -162,14 +181,14 @@
                             ></i>
                         </a>
                     </div>
-                    <div class="">
+                    <div>
                         <a href="#" class="img">
                             <img
                                 src="https://preview.colorlib.com/theme/pato/images/intro-03.jpg.webp"
                                 alt="City view from a restaurant"
                             />
                         </a>
-                        <h4>Romantic Restaurant</h4>
+                        <a href="#"><h4>Red Wines You Love</h4></a>
                         <p>
                             Phasellus lorem enim, luctus ut velit eget,
                             con-vallis egestas eros.
@@ -184,10 +203,9 @@
                     </div>
                 </div>
             </section>
-
             <section id="menu">
                 <div class="container">
-                    <div class="header">
+                    <div class="heading">
                         <span>Discover</span>
                         <h3>Our Menu</h3>
                     </div>
@@ -213,12 +231,11 @@
                     </div>
                 </div>
             </section>
-
             <section id="events">
                 <div class="events-slider">
                     <div class="slide-01">
                         <div class="container">
-                            <div class="header">
+                            <div class="heading">
                                 <span>Upcomming</span>
                                 <h3>Events</h3>
                             </div>
@@ -272,7 +289,7 @@
                     </div>
                     <div class="slide-02">
                         <div class="container">
-                            <div class="header">
+                            <div class="heading">
                                 <span>Upcomming</span>
                                 <h3>Events</h3>
                             </div>
@@ -326,7 +343,7 @@
                     </div>
                     <div class="slide-03">
                         <div class="container">
-                            <div class="header">
+                            <div class="heading">
                                 <span>Upcomming</span>
                                 <h3>Events</h3>
                             </div>
@@ -383,7 +400,7 @@
             <section id="booking">
                 <div class="container">
                     <div class="left-side">
-                        <div class="header">
+                        <div class="heading">
                             <span>Reservation</span>
                             <h3>Book table</h3>
                         </div>
@@ -479,11 +496,9 @@
                 </div>
             </section>
             <section id="reviews">
-                <div class="header">
-                    <div class="container">
-                        <span>Customers Say</span>
-                        <h3>Review</h3>
-                    </div>
+                <div class="heading">
+                    <span>Customers Say</span>
+                    <h3>Review</h3>
                 </div>
                 <div class="reviews-slider">
                     <div id="slide-01">
@@ -552,23 +567,20 @@
                 </div>
             </section>
             <section id="video">
-                <div>
+                <div class="heading">
                     <span>Discover</span>
                     <h3>Our Video</h3>
-                    <a
-                        data-fancybox="video"
-                        data-src="https://youtu.be/5k1hSu2gdKE"
-                    >
-                        <i
-                            class="fa fa-play fs-18 m-l-2"
-                            aria-hidden="true"
-                        ></i>
-                    </a>
                 </div>
+                <a
+                    data-fancybox="video"
+                    data-src="https://youtu.be/5k1hSu2gdKE"
+                >
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                </a>
             </section>
             <section id="blog">
                 <div class="container">
-                    <div class="header">
+                    <div class="heading">
                         <span>Latest News</span>
                         <h3>The Blog</h3>
                     </div>
@@ -668,6 +680,8 @@
                 </div>
             </section>
         </main>
+        <!-- #endregion -->
+        <!-- #region FOOTER -->
         <footer>
             <div class="main">
                 <div class="container">
@@ -864,6 +878,8 @@
                 </div>
             </div>
         </footer>
+        <!-- #endregion -->
+
         <!-- JQuery -->
         <!-- using for the first time after 6 years 🤯 -->
         <script
@@ -882,7 +898,18 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
+        <!-- FancyBox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+        <!-- Shitty Parallax -->
+        <!-- <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.0/parallax.min.js"
+            integrity="sha512-vS0dV6kxcESGshJ6anrXJFFNNtf9vXNZnsgnclUdV2tOzBZUsvGxnSj1NdKpgslLrsOe3ogFnQYHajyIH03Qcw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script> -->
+        <!-- Working Parallax -->
+        <script src="./assets/vendors/_parallax.js"></script>
+        <!-- Main JS -->
         <script src="./assets/js/main.js"></script>
     </body>
 </html>

@@ -10,33 +10,16 @@ section#booking {
     );
 
     .container {
-        height: 100%;
-
         @include grid(2, 1, 50px);
+        height: 100%;
         padding-block: 120px;
         text-align: center;
 
         .left-side {
             height: 100%;
             @include flex(center, center, column);
-            .header {
-                span {
-                    font-family: Courgette;
-                    font-size: 30px;
-                    line-height: 1.2;
-                    color: #d61c22;
-                }
-                h3 {
-                    font-family: Poppins;
-                    font-weight: 700;
-                    font-size: 50px;
-                    line-height: 1.2;
-                    color: #222222;
-                    text-transform: uppercase;
-                    letter-spacing: 6px;
-                    margin-bottom: 35px;
-                }
-            }
+            @include heading(50px, $dark-color--2, 6px, 0px, 5px, 35px);
+
             form {
                 width: 100%;
                 .content {
@@ -47,70 +30,58 @@ section#booking {
                         @include flex(space-between, flex-start, column, 10px);
 
                         label {
-                            font-family: Montserrat;
-                            font-weight: 400;
                             font-size: 15px;
-                            color: #555555;
+                            color: $dark-color-accent--1;
                         }
                         input,
                         select {
-                            font-family: Montserrat;
-                            font-weight: 400;
-                            font-size: 14px;
-                            color: #666666;
-                            font-family: Montserrat;
-                            font-weight: 400;
-                            font-size: 14px;
-                            color: #666666;
-                            border-radius: 10px;
-                            outline: none;
-                            padding-inline: 20px;
                             width: 100%;
                             height: 50px;
+                            font-size: 14px;
+                            color: $dark-color-accent--3;
+                            border-radius: 10px;
+                            padding-inline: 20px;
+                            outline: none;
                             margin-top: 3px;
                             border: 2px solid #d9d9d9;
+
+                            &:focus {
+                                border: 2px solid #d61c22;
+                            }
                         }
                     }
                 }
 
                 .footer button {
-                    margin: 20px auto;
-                    background: #111111;
-                    border-radius: 10px;
                     width: 150px;
                     height: 40px;
-                    font-family: Montserrat;
-                    font-weight: 400;
                     font-size: 12px;
-                    line-height: 1.1;
                     color: white;
+                    margin: 20px auto;
+                    border-radius: 10px;
+                    background: $dark-color--1;
+                    line-height: 1.1;
                     text-transform: uppercase;
                     letter-spacing: 1px;
-                    @include transition();
 
                     &:hover {
-                        background: #d61c22;
+                        background: $primary-color;
                     }
                 }
             }
         }
 
         .right-side {
-            height: 100%;
             @extend %flex-center;
-            .img {
-                overflow: hidden;
-                border-radius: 10px;
-                max-width: 390px;
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    @include transition();
+            height: 100%;
 
-                    &:hover {
-                        transform: scale(1.1);
-                    }
+            .img {
+                border-radius: 10px;
+                overflow: hidden;
+                max-width: 390px;
+
+                img {
+                    @include img($scaleOnHover: true);
                 }
             }
         }
