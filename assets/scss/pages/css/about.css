@@ -153,6 +153,16 @@ html {
   scroll-behavior: smooth;
 }
 
+::-moz-selection {
+  background-color: #ec1d25;
+  color: white;
+}
+
+::selection {
+  background-color: #ec1d25;
+  color: white;
+}
+
 img,
 a,
 i,

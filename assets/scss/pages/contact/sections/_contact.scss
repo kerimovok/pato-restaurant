@@ -81,6 +81,10 @@ section#contact {
                 text-transform: uppercase;
                 letter-spacing: 1px;
 
+                &:hover {
+                    background: $secondary-color;
+                }
+
                 @include responsive(small) {
                     width: 100%;
                 }

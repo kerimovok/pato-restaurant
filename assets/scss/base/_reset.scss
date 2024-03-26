@@ -139,3 +139,7 @@ a {
 html {
     scroll-behavior: smooth;
 }
+::selection {
+    background-color: #ec1d25;
+    color: white;
+}

@@ -153,6 +153,16 @@ html {
   scroll-behavior: smooth;
 }
 
+::-moz-selection {
+  background-color: #ec1d25;
+  color: white;
+}
+
+::selection {
+  background-color: #ec1d25;
+  color: white;
+}
+
 img,
 a,
 i,
@@ -847,6 +857,9 @@ section#contact .container form button {
   color: white;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+section#contact .container form button:hover {
+  background: #ec1d25;
 }
 @media (max-width: 576px) {
   section#contact .container form button {
