@@ -1,0 +1,18 @@
+section#story {
+    width: 100%;
+    @extend %bg-pattern;
+
+    .container {
+        padding-block: 120px;
+        text-align: center;
+        @include heading(50px, $dark-color--2, 6px, 0px, 5px, 35px);
+
+        .heading p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: $dark-color-accent--3;
+            max-width: 850px;
+            margin-inline: auto;
+        }
+    }
+}

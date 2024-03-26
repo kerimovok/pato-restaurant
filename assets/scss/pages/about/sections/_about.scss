@@ -1,0 +1,52 @@
+section#about {
+    width: 100%;
+    @extend %bg-pattern;
+
+    .container {
+        @include flex(center, center, column, 200px);
+        padding-block: 120px;
+        text-align: center;
+
+        > div {
+            @include grid(2, 1, 50px);
+            @include responsive(large) {
+                @include grid(1, 2, 50px);
+                grid-template-rows: auto;
+            }
+
+            .left-side {
+                padding-top: 60px;
+                @include heading(50px, $dark-color--2, 6px, 0px, 5px, 35px);
+
+                @include responsive(large) {
+                    @include heading(30px, $dark-color--2, 6px, 0px, 5px, 35px);
+                }
+                .heading p {
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 1.7;
+                    color: $dark-color-accent--3;
+                    max-width: 850px;
+                    margin-inline: auto;
+                }
+            }
+            .right-side {
+                @extend %flex-center;
+                height: 100%;
+                @include responsive(large) {
+                    height: fit-content;
+                }
+
+                .img {
+                    border-radius: 10px;
+                    overflow: hidden;
+                    max-width: 390px;
+
+                    img {
+                        @include img($scaleOnHover: true);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+// Should be a separate component, but can't see the proper way to do
+section#video {
+    height: 100dvh;
+    width: 100%;
+
+    @include bg-img(
+        $url:
+            "https://preview.colorlib.com/theme/pato/images/header-menu-01.jpg.webp",
+        $attachment: fixed
+    );
+
+    @include heading(50px, white, 10px, 6px, 5px, 0);
+
+    div {
+        @include flex(center, center, column);
+        padding-block: 120px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        a {
+            @extend %flex-center;
+            @include size(70px);
+            margin: 50px auto;
+            color: $dark-color--2;
+            background-color: white;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+                background-color: $primary-color;
+                opacity: 0.6;
+                transform: scale(1.1);
+            }
+        }
+    }
+}

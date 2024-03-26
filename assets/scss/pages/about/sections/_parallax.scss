@@ -1,0 +1,13 @@
+section#parallax {
+    .parallax {
+        height: 70dvh;
+        padding-block: 120px;
+        @include bg-img(
+            "https://preview.colorlib.com/theme/pato/images/bg-cover-video-02.jpg.webp",
+            cover,
+            center,
+            no-repeat,
+            fixed
+        );
+    }
+}
