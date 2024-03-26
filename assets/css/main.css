@@ -187,7 +187,7 @@ section#events .container .content .card .content .countdown, footer .bottom .co
   align-items: center;
 }
 
-section#contact, section#welcome {
+section#reservation, section#contact, section#booking, section#welcome {
   background-image: url("https://preview.colorlib.com/theme/pato/images/icons/pattern1.png.webp");
   background-size: cover;
   background-position: center;
@@ -1315,11 +1315,6 @@ section#booking {
   position: relative;
   width: 100%;
   min-height: 100dvh;
-  background-image: url("https://preview.colorlib.com/theme/pato/images/icons/pattern1.png.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: repeat;
-  background-attachment: scroll;
 }
 section#booking .container {
   display: grid;
@@ -1914,4 +1909,163 @@ section#contact .container .infos div .content span {
   font-size: 13px;
   color: #666666;
   line-height: 1.7;
+}
+
+section#header {
+  min-height: 70dvh;
+  padding-block: 120px;
+  background-image: url("https://preview.colorlib.com/theme/pato/images/bg-title-page-02.jpg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+section#header h1 {
+  font-size: 50px;
+  line-height: 1.2;
+  color: white;
+  letter-spacing: 6px;
+  word-spacing: 6px;
+}
+@media (max-width: 760px) {
+  section#header h1 {
+    font-size: 30px;
+  }
+}
+
+section#reservation {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+}
+section#reservation .container {
+  height: 100%;
+  padding-block: 120px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+section#reservation .container .heading {
+  text-align: center;
+}
+section#reservation .container .heading span {
+  font-family: "Courgette", sans-serif;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #d61c22;
+}
+section#reservation .container .heading h3 {
+  font-size: 50px;
+  color: #222222;
+  letter-spacing: 6px;
+  word-spacing: 0px;
+  margin-bottom: 35px;
+  margin-top: 5px;
+}
+section#reservation .container form {
+  width: 100%;
+}
+section#reservation .container form .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+  margin-inline: auto;
+  width: 70%;
+}
+@media (max-width: 992px) {
+  section#reservation .container form .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 10px;
+    width: 80%;
+  }
+}
+@media (max-width: 760px) {
+  section#reservation .container form .content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 10px;
+    width: 90%;
+  }
+}
+section#reservation .container form .content label {
+  font-size: 15px;
+  color: #555555;
+}
+section#reservation .container form .content input,
+section#reservation .container form .content select {
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  color: #666666;
+  border-radius: 10px;
+  padding-inline: 20px;
+  outline: none;
+  border: 2px solid #d9d9d9;
+  margin-top: 5px;
+}
+section#reservation .container form .content input:focus,
+section#reservation .container form .content select:focus {
+  border: 2px solid #ec1d25;
+}
+section#reservation .container form button {
+  display: block;
+  width: 150px;
+  height: 40px;
+  font-size: 12px;
+  color: white;
+  margin: 40px auto;
+  border-radius: 10px;
+  background: #111111;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+section#reservation .container form button:hover {
+  background: #d61c22;
+}
+@media (max-width: 576px) {
+  section#reservation .container form button {
+    width: 90%;
+  }
+}
+section#reservation .container .ending {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 50px;
+}
+@media (max-width: 760px) {
+  section#reservation .container .ending {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px;
+  }
+}
+section#reservation .container .ending h4 {
+  font-weight: 500;
+  font-size: 22px;
+  color: #333333;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+section#reservation .container .ending p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0px;
+}
+section#reservation .container .ending p a {
+  color: #d61c22;
+}
+section#reservation .container .ending p strong {
+  color: #222222;
 }/*# sourceMappingURL=main.css.map */

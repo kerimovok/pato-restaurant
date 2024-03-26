@@ -2,12 +2,7 @@ section#booking {
     position: relative;
     width: 100%;
     min-height: 100dvh;
-
-    @include bg-img(
-        $url:
-            "https://preview.colorlib.com/theme/pato/images/icons/pattern1.png.webp",
-        $repeat: repeat
-    );
+    @extend %bg-pattern;
 
     .container {
         @include grid(2, 1, 50px);

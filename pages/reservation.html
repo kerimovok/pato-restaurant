@@ -34,7 +34,7 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
-        <title>Contact</title>
+        <title>Reservation</title>
     </head>
     <body>
         <!-- For displaying current breakpoint -->
@@ -184,104 +184,123 @@
         <!-- #region MAIN -->
         <main>
             <section id="header">
-                <h1>CONTACT</h1>
+                <h1>RESERVATION</h1>
             </section>
 
-            <section id="contact">
+            <section id="reservation">
                 <div class="container">
-                    <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.428674853689!2d49.851370575845536!3d40.37719087144597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d079efb5163%3A0xc20aa51a5f0b5e01!2sCode%20Academy!5e0!3m2!1sru!2saz!4v1711446430676!5m2!1sru!2saz"
-                            style="border: 0"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                        ></iframe>
+                    <div class="heading">
+                        <span>Reservation</span>
+                        <h3>Book table</h3>
                     </div>
-
-                    <h3>SEND US A MESSAGE</h3>
                     <form>
-                        <div class="top">
+                        <div class="content">
+                            <div>
+                                <label for="date">Date</label>
+                                <input type="date" name="date" />
+                            </div>
+
+                            <div>
+                                <label for="time">Time</label>
+                                <select
+                                    name="time"
+                                    tabindex="-1"
+                                    aria-hidden="true"
+                                >
+                                    <option>9:00</option>
+                                    <option>9:30</option>
+                                    <option>10:00</option>
+                                    <option>10:30</option>
+                                    <option>11:00</option>
+                                    <option>11:30</option>
+                                    <option>12:00</option>
+                                    <option>12:30</option>
+                                    <option>13:00</option>
+                                    <option>13:30</option>
+                                    <option>14:00</option>
+                                    <option>14:30</option>
+                                    <option>15:00</option>
+                                    <option>15:30</option>
+                                    <option>16:00</option>
+                                    <option>16:30</option>
+                                    <option>17:00</option>
+                                    <option>17:30</option>
+                                    <option>18:00</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="people">People</label>
+                                <select
+                                    name="people"
+                                    tabindex="-1"
+                                    aria-hidden="true"
+                                >
+                                    <option>1 person</option>
+                                    <option>2 people</option>
+                                    <option>3 people</option>
+                                    <option>4 people</option>
+                                    <option>5 people</option>
+                                    <option>6 people</option>
+                                    <option>7 people</option>
+                                    <option>8 people</option>
+                                    <option>9 people</option>
+                                    <option>10 people</option>
+                                    <option>11 people</option>
+                                    <option>12 people</option>
+                                </select>
+                            </div>
+
                             <div>
                                 <label for="name">Name</label>
                                 <input
                                     type="text"
                                     name="name"
-                                    id="name"
                                     placeholder="Name"
                                 />
                             </div>
-                            <div>
-                                <label for="email">Email</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    placeholder="Email"
-                                />
-                            </div>
+
                             <div>
                                 <label for="phone">Phone</label>
                                 <input
-                                    type="tel"
+                                    type="text"
                                     name="phone"
-                                    id="phone"
                                     placeholder="Phone"
                                 />
                             </div>
+
+                            <div>
+                                <label for="email">Email</label>
+                                <input
+                                    type="text"
+                                    name="email"
+                                    placeholder="Email"
+                                />
+                            </div>
                         </div>
-                        <div class="bottom">
-                            <label for="message">Message</label>
-                            <textarea
-                                placeholder="Message"
-                                name="message"
-                                id="message"
-                                cols="30"
-                                rows="10"
-                            ></textarea>
-                        </div>
-                        <button type="submit">Submit</button>
+                        <button type="submit">Book Table</button>
                     </form>
-                    <div class="infos">
+                    <div class="ending">
                         <div>
-                            <div class="icon">
-                                <img
-                                    src="https://preview.colorlib.com/theme/pato/images/icons/map-icon.png.webp"
-                                    alt="Map image"
-                                />
-                            </div>
-                            <div class="content">
-                                <h5>Location</h5>
-                                <span>
-                                    8th floor, 379 Hudson St, New York, NY 10018
-                                </span>
-                            </div>
+                            <h4>Reserve by Phone</h4>
+                            <p>
+                                Donec quis euismod purus. Donec feugiat ligula
+                                rhoncus, varius nisl sed, tincidunt lectus.
+                                <strong>Nulla vulputate</strong>
+                                , lectus vel volutpat efficitur, orci
+                                <strong>lacus sodales</strong>
+                                sem, sit amet quam:
+                                <a href="tel:+1111">(001) 345 6889</a>
+                            </p>
                         </div>
                         <div>
-                            <div class="icon">
-                                <img
-                                    src="https://preview.colorlib.com/theme/pato/images/icons/phone-icon.png.webp"
-                                    alt="Phone image"
-                                />
-                            </div>
-                            <div class="content">
-                                <h5>Call Us</h5>
-                                <span> (+1) 96 716 6879 </span>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="icon">
-                                <img
-                                    src="https://preview.colorlib.com/theme/pato/images/icons/clock-icon.png.webp"
-                                    alt="Clock image"
-                                />
-                            </div>
-                            <div class="content">
-                                <h5>Opening Hours</h5>
-                                <span>
-                                    09:30 AM – 11:00 PM <br />Every Day
-                                </span>
-                            </div>
+                            <h4>For Event Booking</h4>
+                            <p>
+                                Donec feugiat ligula rhoncus:
+                                <a href="tel:+1111">(001) 345 6889</a>
+                                , varius nisl sed, tinci-dunt lectus sodales
+                                sem.
+                            </p>
                         </div>
                     </div>
                 </div>

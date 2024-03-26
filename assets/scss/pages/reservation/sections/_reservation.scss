@@ -1,0 +1,107 @@
+section#reservation {
+    position: relative;
+    width: 100%;
+    min-height: 100dvh;
+    @extend %bg-pattern;
+
+    .container {
+        height: 100%;
+        padding-block: 120px;
+
+        height: 100%;
+        @include flex(center, center, column);
+        @include heading(50px, $dark-color--2, 6px, 0px, 5px, 35px);
+
+        form {
+            width: 100%;
+            .content {
+                @include grid(3, 1, 20px);
+                margin-inline: auto;
+                width: 70%;
+                @include responsive(large) {
+                    @include grid(2, auto, 10px);
+                    width: 80%;
+                }
+                @include responsive(medium) {
+                    @include grid(1, auto, 10px);
+                    width: 90%;
+                }
+
+                label {
+                    font-size: 15px;
+                    color: $dark-color-accent--1;
+                }
+
+                input,
+                select {
+                    width: 100%;
+                    height: 50px;
+                    font-size: 14px;
+                    color: $dark-color-accent--3;
+                    border-radius: 10px;
+                    padding-inline: 20px;
+                    outline: none;
+                    border: 2px solid #d9d9d9;
+                    margin-top: 5px;
+
+                    &:focus {
+                        border: 2px solid $secondary-color;
+                    }
+                }
+            }
+
+            button {
+                display: block;
+                width: 150px;
+                height: 40px;
+                font-size: 12px;
+                color: white;
+                margin: 40px auto;
+                border-radius: 10px;
+                background: $dark-color--1;
+                line-height: 1.1;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+
+                &:hover {
+                    background: $primary-color;
+                }
+
+                @include responsive(small) {
+                    width: 90%;
+                }
+            }
+        }
+
+        .ending {
+            margin-top: 50px;
+            @include grid(2, 1, 50px);
+            @include responsive(medium) {
+                @include grid(1, 2, 50px);
+            }
+
+            h4 {
+                font-weight: 500;
+                font-size: 22px;
+                color: $dark-color--3;
+                letter-spacing: 3px;
+                margin-bottom: 18px;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 1.7;
+                color: $dark-color-accent--3;
+                margin: 0px;
+
+                a {
+                    color: $primary-color;
+                }
+
+                strong {
+                    color: $dark-color--2;
+                }
+            }
+        }
+    }
+}
