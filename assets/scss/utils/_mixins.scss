@@ -99,6 +99,24 @@
     }
 }
 
+@mixin header($bg-img: "", $min-height: 70dvh, $padding-block: 120px) {
+    min-height: $min-height;
+    padding-block: $padding-block;
+    @extend %flex-center;
+    @include bg-img($bg-img);
+    h1 {
+        font-size: 50px;
+        line-height: 1.2;
+        color: white;
+        letter-spacing: 6px;
+        word-spacing: 6px;
+
+        @include responsive("medium") {
+            font-size: 30px;
+        }
+    }
+}
+
 @mixin transition($property: all, $duration: 0.3s, $timing-function: ease) {
     transition: $property $duration $timing-function;
 }

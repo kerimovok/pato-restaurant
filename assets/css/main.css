@@ -168,7 +168,7 @@ h6 {
   transition: all 0.3s ease;
 }
 
-section#signup .container form, section#signup .container, section#video div a, section#booking .container .right-side, section#events .container .content .card .img .time span, section#menu .container .content div a, section#menu .container .content div, section#welcome .container .right-side, section#hero .container a, .arrow-slider, #scroll-up {
+section#header, section#signup .container form, section#signup .container, section#video div a, section#booking .container .right-side, section#events .container .content .card .img .time span, section#menu .container .content div a, section#menu .container .content div, section#welcome .container .right-side, section#hero .container a, .arrow-slider, #scroll-up {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,7 +187,7 @@ section#events .container .content .card .content .countdown, footer .bottom .co
   align-items: center;
 }
 
-section#welcome {
+section#contact, section#welcome {
   background-image: url("https://preview.colorlib.com/theme/pato/images/icons/pattern1.png.webp");
   background-size: cover;
   background-position: center;
@@ -537,7 +537,14 @@ header .container nav > ul li > a {
 header .container nav > ul li > a:hover {
   color: #ec1d25;
 }
-header .container .socials {
+header .container .right-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+header .container .right-side .socials {
   min-width: 110px;
   display: flex;
   flex-direction: row;
@@ -545,12 +552,12 @@ header .container .socials {
   align-items: flex-start;
   gap: 0;
 }
-header .container .socials a {
+header .container .right-side .socials a {
   color: white;
   padding: 10px;
   font-size: 1rem;
 }
-header .container .socials a:hover {
+header .container .right-side .socials a:hover {
   color: #ec1d25;
 }
 @media (max-width: 992px) {
@@ -559,8 +566,7 @@ header .container .socials a:hover {
     font-size: 12px;
     height: 100px;
   }
-  header .container nav,
-  header .container .socials {
+  header .container nav {
     display: none;
   }
 }
@@ -579,7 +585,8 @@ header .container .socials a:hover {
   background: rgba(255, 255, 255, 0.9) !important;
   color: #222222 !important;
 }
-.header-fixed .burger {
+.header-fixed .burger,
+.header-fixed .socials i {
   color: #d61c22 !important;
 }
 .header-fixed .container {
@@ -1400,7 +1407,7 @@ section#booking .container .left-side form .content div select {
 }
 section#booking .container .left-side form .content div input:focus,
 section#booking .container .left-side form .content div select:focus {
-  border: 2px solid #d61c22;
+  border: 2px solid #ec1d25;
 }
 section#booking .container .left-side form .footer button {
   width: 150px;
@@ -1727,4 +1734,184 @@ section#signup .container form button {
 section#signup .container form button:hover {
   color: white;
   background-color: #ec1d25;
+}
+
+section#header {
+  min-height: 70dvh;
+  padding-block: 120px;
+  background-image: url("https://preview.colorlib.com/theme/pato/images/bg-title-page-02.jpg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+section#header h1 {
+  font-size: 50px;
+  line-height: 1.2;
+  color: white;
+  letter-spacing: 6px;
+  word-spacing: 6px;
+}
+@media (max-width: 760px) {
+  section#header h1 {
+    font-size: 30px;
+  }
+}
+
+section#contact {
+  padding-block: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+section#contact .container {
+  width: 100%;
+}
+section#contact .container .map {
+  overflow: hidden;
+  border-radius: 10px;
+  margin-inline: auto;
+  height: 450px;
+}
+section#contact .container .map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+section#contact .container h3 {
+  margin-block: 50px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #222222;
+  letter-spacing: 3px;
+}
+section#contact .container form {
+  max-width: 80%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+section#contact .container form div {
+  text-align: left;
+}
+section#contact .container form div label {
+  font-size: 15px;
+  color: #555555;
+}
+section#contact .container form input,
+section#contact .container form textarea {
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #666666;
+  width: 100%;
+  outline: none;
+  border: none;
+  border: 2px solid #d9d9d9;
+  padding: 15px 20px;
+}
+section#contact .container form input::-moz-placeholder, section#contact .container form textarea::-moz-placeholder {
+  color: #999999;
+}
+section#contact .container form input::placeholder,
+section#contact .container form textarea::placeholder {
+  color: #999999;
+}
+section#contact .container form input:focus,
+section#contact .container form textarea:focus {
+  border: 2px solid #ec1d25;
+}
+section#contact .container form .top {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 10px;
+}
+@media (max-width: 760px) {
+  section#contact .container form .top {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+section#contact .container form .bottom {
+  width: 100%;
+}
+section#contact .container form button {
+  background: #111111;
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  font-size: 12px;
+  line-height: 1.1;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+@media (max-width: 576px) {
+  section#contact .container form button {
+    width: 100%;
+  }
+}
+section#contact .container .infos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 30px;
+  margin-top: 150px;
+}
+@media (max-width: 760px) {
+  section#contact .container .infos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    width: 80%;
+    margin-inline: auto;
+  }
+}
+section#contact .container .infos div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+section#contact .container .infos div .icon {
+  width: 15%;
+}
+section#contact .container .infos div .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  width: 85%;
+  text-align: left;
+}
+section#contact .container .infos div .content h5 {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 22px;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 22px;
+}
+section#contact .container .infos div .content span {
+  max-width: 190px;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.7;
 }/*# sourceMappingURL=main.css.map */

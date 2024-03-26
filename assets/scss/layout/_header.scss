@@ -29,17 +29,20 @@ header {
             }
         }
 
-        .socials {
-            min-width: 110px;
-            @include flex(right);
+        .right-side {
+            @include flex(center, center, row, 20px);
+            .socials {
+                min-width: 110px;
+                @include flex(right);
 
-            a {
-                color: white;
-                padding: 10px;
-                font-size: 1rem;
+                a {
+                    color: white;
+                    padding: 10px;
+                    font-size: 1rem;
 
-                &:hover {
-                    color: $secondary-color;
+                    &:hover {
+                        color: $secondary-color;
+                    }
                 }
             }
         }
@@ -49,8 +52,7 @@ header {
             font-size: 12px;
             height: $header-height-mobile;
 
-            nav,
-            .socials {
+            nav {
                 display: none;
             }
         }
@@ -65,7 +67,8 @@ header {
     background: rgba(255, 255, 255, 0.9) !important;
     color: $dark-color--2 !important;
 
-    .burger {
+    .burger,
+    .socials i {
         color: $primary-color !important;
     }
     .container {
