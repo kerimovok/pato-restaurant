@@ -1,0 +1,60 @@
+section#menu {
+    @extend %bg-pattern;
+    .container {
+        padding-block: 120px;
+        @include grid(2, 1, 50px);
+
+        @include responsive(large) {
+            @include grid(1, 2, 0);
+            grid-template-rows: auto;
+        }
+
+        .side {
+            .section {
+                margin-bottom: 20px;
+
+                h3 {
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 1.2;
+                    color: $dark-color--2;
+                    letter-spacing: 3px;
+                    margin-bottom: 25px;
+                }
+
+                > div {
+                    margin-bottom: 36px;
+                }
+
+                > div > div {
+                    display: flex;
+                    align-items: end;
+
+                    a {
+                        font-weight: 300;
+                        font-size: 18px;
+                        color: $dark-color--3;
+                        line-height: 1.4;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                    }
+                    div {
+                        flex-grow: 1;
+                        height: 2px;
+                        margin-bottom: 5px;
+                        margin-right: 10px;
+                        margin-left: 10px;
+                        background-image: url(https://preview.colorlib.com/theme/pato/images/icons/pattern3.png);
+                        background-repeat: repeat;
+                    }
+                    span {
+                        font-size: 22px;
+                        color: $dark-color--3;
+                        line-height: 1.2;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
