@@ -168,24 +168,16 @@ h6 {
   transition: all 0.3s ease;
 }
 
-section#header, .arrow-slider, #scroll-up {
+section#signup .container form, section#signup .container, section#gallery .container .pagination a, section#gallery .container .pagination, section#gallery .container .gallery .photo .overlay a, section#header, .arrow-slider, #scroll-up {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-footer .bottom .container, header .container {
+section#gallery .container .filters, footer .bottom .container, header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-section#contact {
-  background-image: url("https://preview.colorlib.com/theme/pato/images/icons/pattern1.png.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: repeat;
-  background-attachment: scroll;
 }
 
 body {
@@ -749,160 +741,182 @@ section#header h1 {
   }
 }
 
-section#contact {
+section#gallery .container {
   padding-block: 120px;
+}
+section#gallery .container .filters {
+  flex-wrap: wrap;
+  max-width: 650px;
+  margin: 0 auto 60px;
+}
+section#gallery .container .filters button {
+  border-radius: 10px;
+  padding: 2px 10px;
+  margin: 5px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  outline: none !important;
+  background: transparent;
+}
+section#gallery .container .filters button.active {
+  background-color: #111111;
+  color: white;
+}
+section#gallery .container .filters button:hover {
+  background-color: #111111;
+  color: white;
+}
+section#gallery .container .gallery {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 30px;
-  text-align: center;
 }
-section#contact .container {
-  width: 100%;
-}
-section#contact .container .map {
+section#gallery .container .gallery .photo {
+  position: relative;
+  display: inline-block;
+  width: calc((100% - 140px) / 3);
   overflow: hidden;
   border-radius: 10px;
-  margin-inline: auto;
-  height: 450px;
+  margin: 30px 15px;
 }
-section#contact .container .map iframe {
+@media (max-width: 992px) {
+  section#gallery .container .gallery .photo {
+    width: calc((100% - 100px) / 2);
+  }
+}
+@media (max-width: 760px) {
+  section#gallery .container .gallery .photo {
+    width: calc(100% - 30px);
+  }
+}
+section#gallery .container .gallery .photo img {
   width: 100%;
   height: 100%;
-  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
-section#contact .container h3 {
-  margin-block: 50px;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 1.2;
-  color: #222222;
-  letter-spacing: 3px;
-}
-section#contact .container form {
-  max-width: 80%;
-  margin-inline: auto;
+section#gallery .container .gallery .photo .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: auto;
+  background-color: #ec1d25;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-}
-section#contact .container form div {
-  text-align: left;
-}
-section#contact .container form div label {
-  font-size: 15px;
-  color: #555555;
-}
-section#contact .container form input,
-section#contact .container form textarea {
-  margin-top: 10px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
   border-radius: 10px;
-  font-size: 14px;
-  color: #666666;
-  width: 100%;
-  outline: none;
-  border: none;
-  border: 2px solid #d9d9d9;
-  padding: 15px 20px;
 }
-section#contact .container form input::-moz-placeholder, section#contact .container form textarea::-moz-placeholder {
-  color: #999999;
+section#gallery .container .gallery .photo .overlay a {
+  font-size: 18px;
+  color: #111111;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: white;
 }
-section#contact .container form input::placeholder,
-section#contact .container form textarea::placeholder {
-  color: #999999;
+section#gallery .container .gallery .photo:hover .overlay {
+  opacity: 0.7;
 }
-section#contact .container form input:focus,
-section#contact .container form textarea:focus {
-  border: 2px solid #ec1d25;
+section#gallery .container .gallery .photo:hover img {
+  transform: scale(1.1);
 }
-section#contact .container form .top {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 10px;
+section#gallery .container .pagination {
+  margin-top: 60px;
 }
-@media (max-width: 760px) {
-  section#contact .container form .top {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 30px;
-  }
+section#gallery .container .pagination a {
+  color: #333333;
+  font-weight: 400;
+  font-size: 13px;
+  color: #808080;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #e6e6e6;
+  margin: 6px;
 }
-section#contact .container form .bottom {
-  width: 100%;
-}
-section#contact .container form button {
-  background: #111111;
-  border-radius: 10px;
-  width: 120px;
-  height: 40px;
-  font-size: 12px;
-  line-height: 1.1;
+section#gallery .container .pagination a:hover, section#gallery .container .pagination a.active {
+  background-color: #333333;
   color: white;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
-@media (max-width: 576px) {
-  section#contact .container form button {
-    width: 100%;
-  }
+
+section#signup {
+  background-image: url("https://preview.colorlib.com/theme/pato/images/icons/pattern1.png.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: scroll;
 }
-section#contact .container .infos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 30px;
-  margin-top: 150px;
+section#signup .container {
+  padding-block: 100px;
 }
-@media (max-width: 760px) {
-  section#contact .container .infos {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 30px;
-    width: 80%;
-    margin-inline: auto;
-  }
+section#signup .container form {
+  flex-wrap: wrap;
+  gap: 15px;
 }
-section#contact .container .infos div {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 10px;
-}
-section#contact .container .infos div .icon {
-  width: 15%;
-}
-section#contact .container .infos div .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 10px;
-  width: 85%;
-  text-align: left;
-}
-section#contact .container .infos div .content h5 {
-  font-family: Poppins;
+section#signup .container form span {
   font-weight: 500;
   font-size: 22px;
   color: #333333;
   text-transform: uppercase;
   letter-spacing: 3px;
-  line-height: 22px;
 }
-section#contact .container .infos div .content span {
-  max-width: 190px;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 13px;
+section#signup .container form .input {
+  position: relative;
+  width: 270px;
+  height: 50px;
+  margin: 10px;
+  font-size: 14px;
+  border-radius: 10px;
   color: #666666;
-  line-height: 1.7;
-}/*# sourceMappingURL=contact.css.map */
+  border: 2px solid #d9d9d9;
+  background-color: white;
+}
+section#signup .container form .input input {
+  font-size: 14px;
+  color: #666666;
+  border-radius: 10px;
+  padding-left: 20px;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+}
+section#signup .container form .input input:focus {
+  border: 2px solid #ec1d25;
+}
+section#signup .container form .input i {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 18px;
+}
+section#signup .container form button {
+  background: #111111;
+  border-radius: 10px;
+  width: 160px;
+  height: 40px;
+  margin: 10px;
+  font-size: 12px;
+  line-height: 1.1;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+section#signup .container form button:hover {
+  color: white;
+  background-color: #ec1d25;
+}/*# sourceMappingURL=gallery.css.map */

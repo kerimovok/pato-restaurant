@@ -132,6 +132,7 @@ $(document).ready(function () {
     Fancybox.bind('[data-fancybox="video"]', {});
     Fancybox.bind('[data-fancybox="footer-gallery"]', {});
     Fancybox.bind('[data-fancybox="sidebar-gallery"]', {});
+    Fancybox.bind('[data-fancybox="gallery"]', {});
 
     // PARALLAX
     $(".parallax").parallax();
@@ -173,5 +174,36 @@ $(document).ready(function () {
     $(overlay).on("click", function () {
         $(sidebar).removeClass("show-sidebar");
         $(overlay).removeClass("show-overlay");
+    });
+
+    // Isotope
+    var $gallery = $(".gallery");
+    var $filters = $(".filters");
+    var $filterButtons = $(".filter");
+
+    $filters.each(function () {
+        $filters.on("click", "button", function () {
+            var filterValue = $(this).attr("data-filter");
+            $gallery.isotope({ filter: filterValue });
+
+            $filterButtons.each(function () {
+                $(this).removeClass("active");
+            });
+
+            $(this).addClass("active");
+        });
+    });
+
+    $(window).on("load", function () {
+        var $grid = $gallery.each(function () {
+            $(this).isotope({
+                itemSelector: ".photo",
+                percentPosition: true,
+                animationEngine: "best-available",
+                masonry: {
+                    columnWidth: ".photo",
+                },
+            });
+        });
     });
 });
